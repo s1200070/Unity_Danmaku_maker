@@ -23,7 +23,7 @@ public class Enemy_Controller : MonoBehaviour {
 				//Debug.Log(i);
 
 				Debug.Log("Enemy_Destroy.HP="+Enemy_Destroy.HP);
-				Debug.Log("Enemy_Destroy.startHP-Player_HP*i="+(Enemy_Destroy.startHP-Enemy_HP*i));
+				Debug.Log("Enemy_Destroy.startHP-Enemy_HP*i="+(Enemy_Destroy.startHP-Enemy_HP*i));
 				Debug.Log("Enemy_HP*(i+1)="+(Enemy_HP*(i+1)));
 
 			if(Enemy_Destroy.HP<=Enemy_Destroy.startHP-Enemy_HP*i&&Enemy_Destroy.HP>Enemy_Destroy.startHP-Enemy_HP*(i+1)&&isShot==false){
