@@ -23,10 +23,10 @@ public class Enemy_Controller : MonoBehaviour {
 				//Debug.Log(i);
 
 				Debug.Log("Enemy_Destroy.HP="+Enemy_Destroy.HP);
-				Debug.Log("Enemy_Destroy.startHP-Player_HP*i="+(Enemy_Destroy.startHP-Player_HP*i));
-				Debug.Log("Player_HP*(i+1)="+(Player_HP*(i+1)));
+				Debug.Log("Enemy_Destroy.startHP-Player_HP*i="+(Enemy_Destroy.startHP-Enemy_HP*i));
+				Debug.Log("Enemy_HP*(i+1)="+(Enemy_HP*(i+1)));
 
-			if(Enemy_Destroy.HP<=Enemy_Destroy.startHP-Player_HP*i&&Enemy_Destroy.HP>Enemy_Destroy.startHP-Player_HP*(i+1)&&isShot==false){
+			if(Enemy_Destroy.HP<=Enemy_Destroy.startHP-Enemy_HP*i&&Enemy_Destroy.HP>Enemy_Destroy.startHP-Enemy_HP*(i+1)&&isShot==false){
 				Enemy = (GameObject)Instantiate(Enemy_Bullet[i-1],this.transform.position,this.transform.rotation);
 				isShot = true;
 				isAdded = false;
@@ -34,7 +34,7 @@ public class Enemy_Controller : MonoBehaviour {
 				}
 
 			
-			if(Enemy_Destroy.HP<Enemy_Destroy.startHP-Player_HP*(i+1)){
+			if(Enemy_Destroy.HP<Enemy_Destroy.startHP-Enemy_HP*(i+1)){
 				Destroy(Enemy.gameObject);
 					if(isAdded == false){
 						current += 1;
