@@ -7,7 +7,7 @@ public class Enemy_Controller : MonoBehaviour {
 
 	public GameObject[] Enemy_Bullet = new GameObject[100];//とりあえず100発撃てるようにしておく 
 	public float waittime = 1f;//何秒間隔で撃ちたいか
-	public float Player_HP = 10; //プレイヤーのHPがいくつ削られたら次の弾幕に遷移するか
+	public float Enemy_HP = 10; //自分のHPがいくつ削られたら次の弾幕に遷移するか
 	private bool isShot = false;
 	int current = 1;
 	private GameObject Enemy; 
